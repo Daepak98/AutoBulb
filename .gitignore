@@ -1,1 +1,8 @@
+# VS Code Settings
 .vscode/*
+
+# Python Cache Hiding
+__pycache__/*
+
+# Any output files created
+output*
