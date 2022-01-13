@@ -21,7 +21,9 @@ if __name__ == "__main__":
                                 layout,
                                 image_points,
                                 world_points)
-    lm = PiLEDHardwareInterface(lc.lights, [17, 27, 22], 10)
+    lm = PiLEDHardwareInterface(light_model=lc.lights,
+                                GPIO_pins=[17, 27, 22],
+                                change_delay=10)
 
     positions = pr.get_positions()
     while positions != False:
@@ -33,4 +35,3 @@ if __name__ == "__main__":
         print(lm.delay_timer)
         print()
         positions = pr.get_positions()
-        # time.sleep(0.5)
